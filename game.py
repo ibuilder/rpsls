@@ -17,7 +17,7 @@ print("Welcome", player.user, "!")
 
 # NPC Character variables
 npc_choice = vars(random.choice(choices))
-print(npc_choice)
+# print(npc_choice) # test choice of npc
 npc_weight = npc_choice['weight']
 npc_player = npc_choice['player']
 npc_winphrase = npc_choice['winphrase']
