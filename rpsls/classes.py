@@ -10,58 +10,42 @@ class Characters():
 
 
 class User():
-    def __init__(self, user, password):
+    def __init__(self, user):
         self.user = user
-        self.password = password
 
     def change_name(self, user):
         self.user = user
         return self.user
 
-    def change_password(self, password):
-        self.password = password
-        return self.password
-
 
 def battle(char_weight, npc_weight, char_player, npc_player, char_winphrase, npc_winphrase, char_losephrase, npc_losephrase, playerscore, npcscore):
-    
-    diff = (char_weight - npc_weight)%5
-    
+
+    diff = (char_weight - npc_weight) % 5
+
     if diff == 0:
-        print ("It's a draw")
-    elif diff >=3:
+        print("It's a draw")
+    elif diff >= 3:
         if char_weight > npc_weight:
-            playerscore = playerscore + 1
-            print (char_player, char_winphrase, npc_player)
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
-            return playerscore
+            print(char_player, char_winphrase, npc_player)
+            return char_player
         elif char_weight == npc_weight:
-            print ("It's a draw")
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
-
+            print("It's a draw")
         else:
-            npcscore = npcscore + 1
-            print (npc_player, npc_winphrase, char_player)
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
-            return npcscore
+            print(npc_player, npc_winphrase, char_player)
+            return npc_player
 
-    elif diff <=2:
+    elif diff <= 2:
         if char_weight < npc_weight:
-            npcscore = npcscore + 1
-            print (char_player, char_losephrase, npc_player)
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
-            return npcscore
+            print(char_player, char_losephrase, npc_player)
+            return char_player
         elif char_weight == npc_weight:
-            print ("It's a draw")
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
+            print("It's a draw")
         else:
-            playerscore = playerscore + 1
-            print (npc_player, npc_losephrase, char_player)
-            print("You have", playerscore, "points and the computer has", npcscore, "points")
-            return playerscore
-
+            print(npc_player, npc_losephrase, char_player)
+            return npc_player
     else:
-        print ('Something went wrong')
+        print('Something went wrong')
+
 
 def gameoptions():
     print("-----------------")
