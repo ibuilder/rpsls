@@ -27,22 +27,26 @@ def battle(char_weight, npc_weight, char_player, npc_player, char_winphrase, npc
     elif diff >= 3:
         if char_weight > npc_weight:
             print(char_player, char_winphrase, npc_player)
+            print("You Win!")
             return char_player
         elif char_weight == npc_weight:
             print("It's a draw")
         else:
             print(npc_player, npc_winphrase, char_player)
+            print("Computer Wins!")
             return npc_player
 
     elif diff <= 2:
         if char_weight < npc_weight:
             print(char_player, char_losephrase, npc_player)
-            return char_player
+            print("Computer Wins!")
+            return npc_player
         elif char_weight == npc_weight:
             print("It's a draw")
         else:
             print(npc_player, npc_losephrase, char_player)
-            return npc_player
+            print("You Win!")
+            return char_player
     else:
         print('Something went wrong')
 
