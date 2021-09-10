@@ -1,5 +1,5 @@
 # rpsls
-Rock Paper Scissor Lizard Spock offshoot of original game from the Big Bang Theory.   The game was originally introduced in the the episode called the Lizard Spock Eexpansion: https://bigbangtheory.fandom.com/wiki/The_Lizard-Spock_Expansion
+Rock Paper Scissor Lizard Spock offshoot of original game from the Big Bang Theory.   The game was originally introduced in the the episode called the Lizard Spock Expansion: https://bigbangtheory.fandom.com/wiki/The_Lizard-Spock_Expansion
 
 ## Rules of the Game
 * Scissors cuts Paper
